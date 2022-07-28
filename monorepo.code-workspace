@@ -1,6 +1,30 @@
 {
   "folders": [
     {
+      "name": "internal",
+      "path": "features/internal/"
+    },
+    {
+      "name": "config",
+      "path": "features/config/"
+    },
+    {
+      "name": "kits",
+      "path": "features/kits/"
+    },
+    {
+      "name": "render",
+      "path": "packages/render/"
+    },
+    {
+      "name": "account",
+      "path": "apps/account/"
+    },
+    {
+      "name": "main",
+      "path": "apps/main/"
+    },
+    {
       "name": "monorepo",
       "path": "."
     }
@@ -28,12 +52,18 @@
       "**/bower_components": true
     },
     //
-    "editor.rulers": [80, 120],
+    "editor.rulers": [
+      80,
+      120
+    ],
     "files.eol": "\n",
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
     //
-    "todo-tree.general.tags": ["TODO:", "FIXME:"],
+    "todo-tree.general.tags": [
+      "TODO:",
+      "FIXME:"
+    ],
     "todo-tree.highlights.defaultHighlight": {
       "gutterIcon": true
     },
