@@ -7,6 +7,12 @@ function readPackage(pkg, _context) {
       'any-observable': '^0.5.1',
     };
   }
+  if (pkg.name === '@i18n-ecom/eslint-config') {
+    pkg.devDependencies = {
+      ...pkg.devDependencies,
+      ...pkg.peerDependencies
+    };
+  }
 
   return pkg;
 }

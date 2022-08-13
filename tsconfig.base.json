@@ -1,0 +1,12 @@
+{
+    "extends": "@oec-open/ttspc-config/tsconfig.base.json",
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "@/*": ["./src/*"]
+      }
+    },
+    "include": ["src", "expose"],
+    "exclude": ["src/api"]
+  }
+  

@@ -1,0 +1,48 @@
+{
+  "name": "@web3-open/config",
+  "version": "0.1.0",
+  "desciption": "About config of TTSPC",
+  "types": "./types/index.d.ts",
+  "bin": {
+    "installLocales": "scripts/installFallbackLocales.js",
+    "installPricelib": "scripts/installPricelib.js",
+    "ttspcBuild": "scripts/builder/openBuilder.js"
+  },
+  "scripts": {
+    "postinstall": "node scripts/postinstall"
+  },
+  "dependencies": {
+    "@arco-design/iconbox-react-m4b-seller": "0.0.15",
+    "@arco-design/webpack-plugin": "^1.7.0",
+    "@byted-zephyr/design-token": "0.1.4",
+    "@byted/goofy_plugin": "0.2.0-beta.3",
+    "@i18n-ecom-seller/eslint-plugin-chinese-check": "^1.0.1",
+    "@i18n-ecom/eslint-plugin": "4.0.1",
+    "@i18n-ecom/whistle.rules_watcher": "1.0.4",
+    "@ies/starling-cli": "2.7.7",
+    "@modern-js/module-tools": "^1.1.5",
+    "@perfkit/size-limit-webpack": "^2.4.1",
+    "@slardar/webpack-plugin": "1.6.1",
+    "@tailwindcss/line-clamp": "^0.4.0",
+    "axios": "^0.27.2",
+    "babel-loader": "^8.2.5",
+    "commander": "^9.2.0",
+    "crypto": "^1.0.1",
+    "css-modules-typescript-loader": "4.0.1",
+    "dotenv": "16.0.1",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-eslint-comments": "3.2.0",
+    "eslint-plugin-promise": "6.0.0",
+    "eslint-plugin-react": "7.29.4",
+    "eslint-plugin-react-hooks": "4.3.0",
+    "glob": "8.0.3",
+    "handlebars": "^4.7.7",
+    "html-webpack-plugin": "^5",
+    "lodash": "4.17.21",
+    "shelljs": "^0.8.5",
+    "webpack": "^5",
+    "webpack-merge": "^5.8.0",
+    "webpack-sources": "^3.2.3",
+    "webpack-stats-plugin": "1.0.3"
+  }
+}

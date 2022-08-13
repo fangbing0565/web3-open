@@ -1,12 +1,16 @@
 {
   "folders": [
     {
+      "name": "bridge",
+      "path": "features/bridge/"
+    },
+    {
       "name": "internal",
       "path": "features/internal/"
     },
     {
       "name": "config",
-      "path": "features/config/"
+      "path": "packages/config/"
     },
     {
       "name": "kits",

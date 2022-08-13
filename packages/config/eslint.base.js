@@ -1,0 +1,73 @@
+module.exports = {
+    extends: [
+      'eslint:recommended',
+      'plugin:promise/recommended',
+      'plugin:prettier/recommended',
+      'plugin:@typescript-eslint/eslint-recommended',
+      'plugin:@typescript-eslint/recommended',
+      'plugin:react/recommended',
+      'plugin:react-hooks/recommended',
+    ],
+    plugins: [
+      'eslint-comments',
+      // '@i18n-ecom-seller/chinese-check',
+      '@i18n-ecom/eslint-plugin',
+    ],
+    rules: {
+      // consider make it error
+      'react-hooks/exhaustive-deps': 'off',
+      '@typescript-eslint/no-use-before-define': 'off',
+      'react/jsx-no-target-blank': 'off',
+      'react/jsx-uses-react': 2,
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
+        {
+          vars: 'all',
+          args: 'after-used',
+          ignoreRestSiblings: true,
+          argsIgnorePattern: '^_',
+        },
+      ],
+      'promise/no-nesting': 'off',
+      '@typescript-eslint/ban-types': 'off',
+      '@typescript-eslint/explicit-module-boundary-types': 'off',
+      '@typescript-eslint/no-non-null-asserted-optional-chain': 'off',
+      '@typescript-eslint/ban-ts-comment': 'off',
+      'no-prototype-builtins': 'off',
+      'no-case-declarations': 'off',
+      'no-param-reassign': 'off',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off',
+      'react/display-name': 'off',
+      'promise/catch-or-return': 'off',
+      'promise/always-return': 'off',
+      '@typescript-eslint/ban-ts-ignore': 'off',
+      '@typescript-eslint/no-var-requires': 'off',
+      '@typescript-eslint/interface-name-prefix': 'off',
+      '@typescript-eslint/explicit-function-return-type': 'off',
+      '@typescript-eslint/camelcase': 'off',
+      '@typescript-eslint/no-empty-function': 'off',
+      '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/no-non-null-assertion': 'off',
+      '@typescript-eslint/type-annotation-spacing': 'off',
+      '@typescript-eslint/no-inferrable-types': 'off',
+      // '@i18n-ecom-seller/chinese-check/comment': 'error',
+      eqeqeq: ['error', 'always', { null: 'ignore' }],
+      // '@i18n-ecom/no-meaningless/try-catch': [
+      //   'error',
+      //   ['report|Tea|sendError|sendLog'],
+      // ],
+      // '@i18n-ecom/no-meaningless/promise-catch': [
+      //   'warn',
+      //   ['report|Tea|sendError|sendLog'],
+      // ],
+    },
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
+    env: { node: true },
+    ignorePatterns: ['node_modules/', 'dist/', '.rpt2_cache/', 'api/', '*.d.ts'],
+  };
+  
