@@ -1,0 +1,67 @@
+@import '@oec-open/ttspc-styles/common.scss';
+@import './fonts.scss';
+@import './global.scss';
+
+html,
+body {
+  height: 100%;
+}
+
+:global {
+  #root {
+    height: 100%;
+    background-color: var(--zep-neutral-bg2);
+  }
+
+  & .arco-select .arco-select-suffix .arco-select-loading-icon > svg {
+    fill: none;
+    color: $merchantBrandColorNormal;
+  }
+}
+
+body {
+  // override arco font-family define.
+  font-family: Proxima Nova, system-ui, sans-serif !important;
+  background-color: $pageBackgroundColor;
+}
+
+.content {
+  // position: absolute;
+  display: flex;
+  top: 60px;
+  width: 100%;
+  bottom: 0;
+  min-width: 1368px;
+  // padding: 0 14px 0 24px;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.contentMain {
+  padding-top: 60px;
+  padding-right: 10px;
+  margin-left: 362px;
+  flex: 1 1 auto;
+  overflow: scroll;
+  position: relative;
+  height: 100%;
+}
+.contentMainNoNav {
+  padding-top: 0;
+}
+.homeContent {
+  overflow: visible;
+}
+.hideMenu {
+  margin-left: 0;
+}
+.hideNavBar {
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  border-style: solid;
+  border-width: 0;
+}

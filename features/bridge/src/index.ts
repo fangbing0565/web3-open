@@ -1,3 +1,2 @@
-export default function () {
-  return 'hello world';
-}
+// export * from './globalState';
+export * from './hooks';

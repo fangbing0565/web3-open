@@ -1,0 +1,213 @@
+// Reference: https://code.byted.org/toutiao-fe-arch/arco/blob/master/components/style/theme/default.less
+$zIndexPopupBase: 1000;
+$zIndexAffix: $zIndexPopupBase - 1; // 999
+$zIndexPopup: $zIndexPopupBase; // 1000
+$zIndexDrawer: $zIndexPopupBase + 1; // 1001
+$zIndexModal: $zIndexDrawer; // 1001
+$zIndexMessage: $zIndexPopupBase + 3; // 1003
+$zIndexNotification: $zIndexPopupBase + 3; // 1003
+$zIndexImagePreview: $zIndexModal;
+
+$defaultColor: (
+  default: #fff,
+  bgColor: #efefef,
+  borderColor: #f0f0f0,
+  textColor: #131422,
+  subTextColor: #9ba4ae,
+  c1: #edeef0,
+  c2: #ff4500,
+  c3: #9ca4ae,
+  c5: #edeef0,
+  c6: #ff5e00,
+  c10: #d5d8db,
+  c13: #f2f3f5,
+);
+$bgColor: #efefef;
+
+/* color varibles start */
+$textColorLevel1Primary: var(--text-color-level-1-primary);
+$textColorLevel1Secondary: var(--text-color-level-1-secondary);
+$textColorLevel3: var(--text-color-level-3);
+$textColorGray: var(--text-color-gray);
+$frameColorGray: var(--frame-color-gray);
+$backgroundColorGray: var(--background-color-gray);
+$pageBackgroundColor: var(--page-background-color);
+$pureWhite: var(--pure-white);
+$merchantBrandColorNormal: var(--merchant-brand-color-normal);
+$MerchantBrandColorHover: var(--merchant-brand-color-hover);
+$merchantBrandColorHover: var(--merchant-brand-color-hover);
+$merchantBrandColorActive: var(--merchant-brand-color-active);
+$merchantBrandColorDisabled: var(--merchant-brand-color-disabled);
+$darkBrandColor: var(--dark-brand-color);
+$transparentDarkBrandColor: var(--transparent-dark-brand-color);
+$errorColor: var(--error-color);
+$warningColor: var(--warning-color);
+$successColor: var(--success-color);
+$defaultBoxBorderRadius: var(--default-box-border-radius);
+$defaultBoxBorderRadiusBig: var(--default-box-border-radius-big);
+$defaultBoxHeight1: var(--default-box-height-1);
+$defaultBoxHeight2: var(--default-box-height-2);
+$defaultBoxPaddingVertical: var(--default-box-padding-vertical);
+$defaultBoxPaddingHorizontal: var(--default-box-padding-horizontal);
+
+/* color varibles end */
+
+$gridMinimumWidth: 1153px;
+
+// // font weight varibles
+$fontWeightRegular: 400;
+$fontWeightSemibold: 600;
+$fontWeightBold: 700;
+
+/* Typography mixin start */
+@mixin h1() {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+@mixin h2 {
+  font-size: 18px;
+  line-height: 27px;
+}
+
+@mixin h3 {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+@mixin h4 {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+@mixin font-attributes($size, $line-height, $weight) {
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: $weight;
+}
+
+@mixin LH18Regular {
+  @include font-attributes(12px, 18px, $fontWeightRegular);
+}
+
+@mixin LH18Semibold {
+  @include font-attributes(12px, 18px, $fontWeightSemibold);
+}
+
+@mixin LH21Regular {
+  @include font-attributes(14px, 21px, $fontWeightRegular);
+}
+
+@mixin LH21Semibold {
+  @include font-attributes(14px, 21px, $fontWeightSemibold);
+}
+
+@mixin LH24Regular {
+  @include font-attributes(16px, 24px, $fontWeightRegular);
+}
+
+@mixin LH24Semibold {
+  @include font-attributes(16px, 24px, $fontWeightSemibold);
+}
+
+@mixin LH27Regular {
+  @include font-attributes(18px, 27px, $fontWeightRegular);
+}
+
+@mixin LH27Semibold {
+  @include font-attributes(18px, 27px, $fontWeightSemibold);
+}
+
+@mixin LH30Semibold {
+  @include font-attributes(20px, 30px, $fontWeightSemibold);
+}
+
+@mixin LH30Bold {
+  @include font-attributes(24px, 30px, $fontWeightBold);
+}
+
+/* Typography mixin end */
+
+@mixin bg($url, $size: cover) {
+  background: url($url) no-repeat center;
+  background-size: $size;
+}
+
+@mixin link {
+  cursor: pointer;
+
+  &:hover {
+    color: #6e9eff;
+  }
+}
+
+@mixin text-overflow($line: 2) {
+  display: block;
+
+  @if $line==1 {
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    /*! autoprefixer: off */
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+
+    /*! autoprefixer: on */
+  }
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow-wrap: break-word;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+$breakpoints: (
+  'sm': 'only screen and ( max-width: 767Px) and (min-width: 320Px)',
+  'md': 'only screen and ( min-width: 768Px) and ( max-width: 959Px)',
+  'lg': 'only screen and ( min-width: 960Px)',
+  'xl': 'only screen and ( min-width: 1652Px)',
+) !default;
+
+@mixin respond-to($breakpoint) {
+  $query: map-get($breakpoints, $breakpoint);
+
+  @media #{if(type-of($query) == 'string', unquote($query), inspect($query))} {
+    @content;
+  }
+}
+
+@mixin box-shadow($color: map-get($defaultColor, c1)) {
+  box-shadow: 0 px2rem(0.5) 0 0 $color;
+
+  [data-dpr='1'] & {
+    box-shadow: 0 1px 0 0 $color;
+  }
+}
+
+@mixin desktop-content {
+  border-left: 1px solid #ebebeb;
+  border-right: 1px solid #ebebeb;
+  min-height: calc(100vh - 76px);
+  position: relative;
+  // width: 600px;
+}
+
+@mixin desktop-title {
+  display: flex;
+  align-items: center;
+  height: 56px;
+  padding-left: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom: 1px solid #edeef0;
+  border-top: 1px solid #edeef0;
+  position: sticky;
+  top: 56px;
+  z-index: 10;
+  background-color: #fff;
+}

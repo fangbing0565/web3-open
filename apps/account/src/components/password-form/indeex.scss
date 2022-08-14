@@ -1,0 +1,55 @@
+.passwordIconWrapper {
+    display: flex;
+    align-items: center;
+  }
+  .passwordIcon {
+    font-size: 16px;
+    color: #69718c;
+  }
+  
+  .point {
+    width: 4px;
+    height: 4px;
+    background-color: #b3bacc;
+    border-radius: 4px;
+    margin: 6px;
+  }
+  
+  .yes {
+    font-size: 16px;
+    color: #40a711;
+  }
+  
+  .no {
+    font-size: 16px;
+    color: #f0192e;
+  }
+  
+  .statusList {
+    margin-bottom: 16px;
+  }
+  
+  .statusWrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+    padding: 0 8px;
+    .statusDesc {
+      flex: 1;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: #8f98b2;
+      margin-left: 4px;
+    }
+  }
+  
+  .buttonWrapper {
+    padding: 0 8px;
+    width: 100%;
+    margin-top: 16px;
+    .button {
+      width: 100%;
+    }
+  }
+  

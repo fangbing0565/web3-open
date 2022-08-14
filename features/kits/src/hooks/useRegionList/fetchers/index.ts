@@ -1,0 +1,1 @@
+export { getGeographyAPI } from './getGeographyAPI';

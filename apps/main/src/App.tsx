@@ -1,56 +1,107 @@
-import { Switch, Route } from '@modern-js/runtime/router';
+import React from 'react';
+import { useModuleApps } from '@jupiter/plugin-runtime';
+import { garfish } from '@jupiter/plugin-garfish';
+import { ConfigProviderProps } from '@arco-design/web-react';
+import { useMainUserInfo, useMainConfig } from '@oec-open/ttspc-bridge';
+import { ConfigProvider as ArcoConfigProvider } from '@arco-design/web-react';
+import '@arco-design/theme-m4b/css/arco.css';
+// TODO Remember to delete，Replace with m4b Theme @Wang xiaoye
+// import '@i18n-ecom/ui/dist/commonjs/style/theme/index.scss';
 
-import './App.css';
+import Layout from './layout';
+import MenuProvider from './hooks/useMenu';
+import { Slardar, Tea } from '@oec-open/ttspc-kits';
 
-const App = () => (
-  <Switch>
-    <Route exact={true} path="/">
-      <div className="container-box">
-        <main>
-          <div className="logo">
-            <img
-              src="https://lf3-static.bytednsdoc.com/obj/eden-cn/ylaelkeh7nuhfnuhf/modernjs-cover.png"
-              width="300"
-              alt="Modern.js Logo"
-            />
-          </div>
-          <p className="description">
-            Get started by editing <code className="code">src/App.tsx</code>
-          </p>
-          <div className="grid">
-            <a href="https://modernjs.dev/docs/start" className="card">
-              <h2>Quick Start</h2>
-            </a>
-            <a href="https://modernjs.dev/docs/guides" className="card">
-              <h2>Handbook</h2>
-            </a>
-            <a href="https://modernjs.dev/docs/apis" className="card">
-              <h2>API Reference </h2>
-            </a>
-            <a
-              href="https://modernjs.dev/coming-soon"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="card">
-              <h2>Community </h2>
-            </a>
-          </div>
-        </main>
-        <footer className="footer">
-          <a
-            href="https://modernjs.dev"
-            target="_blank"
-            rel="noopener noreferrer">
-            Powered by Modern.js
-          </a>
-        </footer>
-      </div>
-
-    </Route>
-    <Route path="*">
-      <div>404</div>
-    </Route>
-  </Switch>
+garfish.setExternal(
+  '@m4b-design/config-provider',
+  require('@m4b-design/config-provider'),
 );
+garfish.setExternal(
+  '@arco-design/web-react',
+  require('@arco-design/web-react'),
+);
+
+garfish.setExternal({
+  'react-router': 'react-router',
+  'react-router-dom': 'react-router-dom',
+  'react-loadable': 'react-loadable',
+  '@reduck/core': '@reduck/core',
+  '@jupiter/plugin-runtime/model': '@jupiter/plugin-runtime/model',
+});
+
+const componentConfig: ConfigProviderProps['componentConfig'] = {
+  // Input: { size: 'large' },
+  // InputNumber: { size: 'large' },
+  // // InputTag: { size: 'large' },
+  // Select: { size: 'large' },
+  // Pagination: { size: 'small' },
+  // TriggerProps: { showArrow: false },
+  // Cascader: { size: 'large' },
+  // AutoComplete: { inputProps: { size: 'large' } },
+  // TreeSelect: { size: 'large' },
+  // DatePicker: { size: 'large' },
+};
+
+const App = () => {
+  Slardar.startSlardar({
+    bid: 'partner_center',
+    env: 'test',
+  });
+
+  (Tea as any).initTea(
+    {
+      app_id: 13801111,
+      channel: 'va',
+    },
+    true,
+  );
+
+  const { apps } = useModuleApps();
+  /**
+   * 设置用户信息
+   */
+  useMainUserInfo({
+    user_name: '',
+    avatar_url: '',
+    user_id: '',
+    email: '',
+    mobile: '',
+  });
+  /**
+   * 设置语言
+   */
+  useMainConfig({
+    lang: 'en',
+  });
+
+  if (apps.length > 0 && !window.Garfish.running) {
+    console.log('fix garfish bug, add run()');
+    window.Garfish.run();
+  }
+
+  return apps.length ? (
+    <>
+      <ArcoConfigProvider componentConfig={componentConfig}>
+        <MenuProvider>
+          <Layout apps={apps} />
+        </MenuProvider>
+      </ArcoConfigProvider>
+    </>
+  ) : null;
+};
+
+App.config = {
+  features: {
+    masterApp: {
+      manifest: {
+        goofyConfig: {
+          url: 'https://oec-partner-boe.byteintl.net', // The routing address of the main application
+          maxRetry: 3, // Maximum number of retries for failure
+        },
+      },
+    },
+    router: true,
+  },
+};
 
 export default App;

@@ -1,0 +1,90 @@
+@mixin font-base {
+    font-family: var(--main-font-family);
+    color: var(--main-font-color);
+  }
+  
+  @mixin font-attributes($size, $line-height) {
+    font-size: $size;
+    line-height: $line-height;
+  }
+  
+  @mixin font-weight-400 {
+    font-weight: 400;
+  }
+  
+  @mixin font-weight-600 {
+    font-weight: 600;
+  }
+  
+  @mixin font-weight-700 {
+    font-weight: 700;
+  }
+  
+  @mixin font-content-12 {
+    @include font-base;
+    @include font-attributes(12px, 18px);
+  }
+  
+  @mixin font-content-12-semi-bold {
+    @include font-content-12;
+    @include font-weight-600;
+  }
+  
+  @mixin font-content-14 {
+    @include font-base;
+    @include font-attributes(14px, 21px);
+  }
+  
+  @mixin font-size-14 {
+    @include font-weight-400;
+    @include font-attributes(14px, 21px);
+  }
+  
+  @mixin font-content-14-semi-bold {
+    @include font-content-14;
+    @include font-weight-600;
+  }
+  
+  @mixin font-content-16 {
+    @include font-base;
+    @include font-attributes(16px, 24px);
+  }
+  
+  @mixin font-content-16-semi-bold {
+    @include font-content-16;
+    @include font-weight-600;
+  }
+  
+  @mixin font-content-18 {
+    @include font-base;
+    @include font-base;
+  
+    font-size: 18px;
+    line-height: 27px;
+  }
+  
+  @mixin font-content-18-semi-bold {
+    @include font-content-18;
+    @include font-weight-600;
+  }
+  
+  @mixin font-content-20 {
+    @include font-base;
+  
+    font-size: 20px;
+    line-height: 30px;
+  }
+  
+  @mixin font-content-20-semi-bold {
+    @include font-content-20;
+    @include font-weight-600;
+  }
+  
+  @mixin font-title-24 {
+    @include font-base;
+    @include font-weight-700;
+  
+    font-size: 24px;
+    line-height: 30px;
+  }
+  

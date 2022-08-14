@@ -1,0 +1,7 @@
+export enum LOGIN_METHODS {
+    EMAIL_PASSWORD,
+    PHONE_PASSWORD,
+    EMAIL_CODE,
+    PHONE_CODE,
+  }
+  

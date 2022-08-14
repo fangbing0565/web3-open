@@ -1,13 +1,14 @@
 {
-  "extends": "@modern-js/tsconfig/base",
+  "extends": "@oec-open/ttspc-config/tsconfig.base.json",
   "compilerOptions": {
-    "declaration": false,
-    "jsx": "preserve",
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "@shared/*": ["./shared/*"]
+      "@@/i18n": [
+        "./node_modules/@i18n-ecom-seller/build/jupiter/hack-types/i18n"
+      ]
     }
   },
-  "include": ["src", "shared", "config", "modern.config.ts"]
+  "include": ["src", "expose", "../../features/util/routerUtils.jsx"],
+  "exclude": ["src/api"]
 }

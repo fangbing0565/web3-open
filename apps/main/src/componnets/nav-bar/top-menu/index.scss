@@ -1,0 +1,111 @@
+@import '@oec-open/ttspc-styles/common.scss';
+
+.menu {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  margin-left: 211px;
+  padding: 0;
+  height: 100%;
+}
+
+.menu li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 24px;
+  height: 27px;
+  overflow: visible;
+  @include LH27Semibold;
+  cursor: pointer;
+  box-sizing: border-box;
+  color: $textColorGray;
+
+  &.menuItemActive::after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    width: 24px;
+    border-bottom: 2px solid $merchantBrandColorNormal;
+    border-radius: 40px;
+    transform: translateX(-50%);
+  }
+
+  &.menuItemActive,
+  &:hover {
+    color: $frameColorGray;
+  }
+}
+
+.submenu {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 32px 195px;
+  width: 100%;
+  top: 60px;
+  z-index: $zIndexAffix;
+  background-color: $textColorLevel1Secondary;
+  font-size: 14px;
+  overflow-x: scroll;
+  box-sizing: border-box;
+}
+
+.submenuItem {
+  &:not(:last-of-type) {
+    margin-right: 48px;
+  }
+
+  h3 {
+    display: flex;
+    margin: 0;
+    align-items: center;
+    @include LH24Semibold;
+    color: #fff;
+    white-space: nowrap;
+  }
+
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  ul {
+    margin-top: 16px;
+  }
+
+  li {
+    @include LH21Regular;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    white-space: nowrap;
+
+    // solve the issue of width scale up on hover
+    &::after {
+      content: attr(data-title);
+      display: block;
+      font-weight: $fontWeightSemibold;
+      margin-top: -21px;
+      visibility: hidden;
+    }
+
+    &:hover {
+      font-weight: $fontWeightSemibold;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 8px;
+    }
+  }
+}

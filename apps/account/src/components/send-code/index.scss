@@ -1,0 +1,41 @@
+.sendCodeButton {
+    height: 100%;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    height: 22px;
+    color: #3629cc;
+    cursor: pointer;
+    &.isLoading {
+      color: #c1bfff;
+    }
+    &.disabled {
+      color: #c1bfff;
+      cursor: not-allowed;
+    }
+  }
+  
+  .countDown {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #c1bfff;
+  }
+  
+  .sendCodeSplit {
+    width: 1px;
+    height: 7px;
+    border-radius: 2px;
+    background-color: #5245e5;
+    margin: 0 8px 0 4px;
+    display: none;
+  }
+  
+  .inputContainer {
+    &:hover {
+      .sendCodeSplit {
+        display: block;
+      }
+    }
+  }
+  

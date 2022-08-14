@@ -1,0 +1,49 @@
+.formPage {
+    width: 800px;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    .formPageContent {
+      background-color: white;
+      padding: 24px 8px 40px 0;
+      box-sizing: border-box;
+      border-radius: 4px;
+      display: flex;
+      .formPagePic {
+        display: flex;
+        flex: 0 0 392px;
+        align-items: center;
+        justify-content: center;
+        .defaultPic {
+          width: 200px;
+          height: 200px;
+        }
+      }
+      .formPageChildren {
+        flex: 1;
+      }
+    }
+  }
+  
+  .formPageTitleWrapper {
+    display: flex;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+    .formPageTitle {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 30px;
+      color: #212533;
+    }
+  }
+  
+  .nameWrapper {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: #474e66;
+  }
+  

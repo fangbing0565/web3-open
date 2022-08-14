@@ -1,0 +1,36 @@
+@import './common.scss';
+
+.breadCrumbContainer {
+  margin: 8px 0 16px;
+  width: 100%;
+
+  h1 {
+    margin: 0;
+    @include LH30Bold;
+  }
+
+  :global {
+    .arco-breadcrumb-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .titleContainer {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+
+  .backContainer {
+    cursor: pointer;
+    a {
+      text-decoration: none;
+      color: $textColorLevel1Secondary;
+    }
+    a:hover {
+      color: #165dff;
+    }
+  }
+}

@@ -1,4 +1,6 @@
-import { defineConfig } from '@modern-js/app-tools';
+const { subAppConfig } = require('@oec-open/ttspc-config/jupiter/index');
 
-// https://modernjs.dev/docs/apis/config/overview
-export default defineConfig({});
+module.exports = subAppConfig.get('account', {
+  devPort: 4001,
+  enableMockGar: true,
+});

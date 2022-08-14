@@ -1,0 +1,2 @@
+export const GLOBAL_EVENT_EMITTER = 'GLOBAL_EVENT_EMITTER';
+export const GLOBAL_DOMIN = 'GLOBAL';

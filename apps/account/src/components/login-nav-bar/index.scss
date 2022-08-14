@@ -1,0 +1,41 @@
+.LoginNavBarWarpper {
+    height: 60px;
+    width: 100px;
+    .loginNavbar {
+      width: 100%;
+      box-sizing: border-box;
+      height: 60px;
+      min-width: 800px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #03033f;
+      padding: 0 16px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 9;
+      .logo {
+        width: 136px;
+        height: 40px;
+      }
+      .menu {
+        color: white;
+        display: flex;
+        align-items: center;
+      }
+      .line {
+        width: 2px;
+        height: 11px;
+        background-color: #69718c;
+        border-radius: 2px;
+        margin: 0 20px;
+      }
+    }
+  }
+  
+  .dropdown {
+    cursor: pointer;
+  }
+  

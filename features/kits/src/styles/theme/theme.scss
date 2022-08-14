@@ -1,0 +1,65 @@
+body,
+:root {
+  --text-color-level-1-primary: #191d32;
+  --text-color-level-1-secondary: #474c66;
+  --text-color-level-3: #777d99;
+  --text-color-gray: #b8bbcc;
+  --frame-color-gray: #d9dbe6;
+  --background-color-gray: #eaecf7;
+  --page-background-color: #f6f6fb;
+  --color-bg-2: #fff;
+  --merchant-brand-color-normal: #5245e5;
+  --merchant-brand-color-hover: #675be8;
+  --merchant-brand-gradient-hover: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.12),
+      rgba(255, 255, 255, 0.12)
+    ),
+    var(--merchant-brand-color-normal);
+  --merchant-brand-color-active: #4a3dd1;
+  --merchant-brand-gradient-active: linear-gradient(
+      0deg,
+      rgba(12, 4, 63, 0.12),
+      rgba(12, 4, 63, 0.12)
+    ),
+    var(--merchant-brand-color-normal);
+  --merchant-brand-color-disabled: #a2aaf2;
+  --dark-brand-color: #03033f;
+  --transparent-dark-brand-color: rgba(4, 6, 63, 0.8);
+  --alliance-brand-color-1: #242f57;
+  --alliance-brand-color-2: #369afe;
+  --color-primary-light-1: #f5f5ff;
+  --alliance-brand-gradient-hover: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.12),
+      rgba(255, 255, 255, 0.12)
+    ),
+    var(--alliance-brand-color-2);
+  --alliance-brand-gradient-active: linear-gradient(
+      0deg,
+      rgba(0, 47, 90, 0.12),
+      rgba(0, 47, 90, 0.12)
+    ),
+    var(--alliance-brand-color-2);
+  --alliance-brand-gradient-disabled: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.53),
+      rgba(255, 255, 255, 0.53)
+    ),
+    var(--alliance-brand-color-2);
+  --error-color: #ff6453;
+  --warning-color: #ffc755;
+  --success-color: #2dbf67;
+  --default-box-border-radius: 4px;
+  --default-box-border-radius-big: 8px;
+  --default-box-height-1: 45px;
+  --default-box-height-2: 55px;
+  --default-box-padding-vertical: 12px;
+  --default-box-padding-horizontal: 12px;
+}
+
+body,
+:root {
+  --main-font-family: 'Proxima Nova';
+  --main-font-color: var(--text-color-level-1-primary);
+}

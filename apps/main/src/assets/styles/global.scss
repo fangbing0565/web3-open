@@ -1,0 +1,10 @@
+body,
+:root {
+  @apply design-token;
+}
+
+:global {
+  .arco-btn {
+    font-weight: 600 !important;
+  }
+}

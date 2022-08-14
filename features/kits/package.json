@@ -1,31 +1,80 @@
 {
   "name": "@web3-open/kits",
   "version": "0.1.0",
-  "main": "./src/index.ts",
+  "desciption": "About kits of TTSPC",
+  "jsnext:source": "./src/index.ts",
+  "types": "./dist/types/index.d.ts",
+  "main": "./dist/js/node/index.js",
+  "module": "./dist/js/treeshaking/index.js",
+  "jsnext:modern": "./dist/js/modern/index.js",
   "scripts": {
+    "prepare": "modern build",
+    "prepublishOnly": "modern build --platform",
     "dev": "modern dev",
+    "build": "modern build",
+    "wBuild": "modern build --watch",
+    "w": "modern build --watch",
     "new": "modern new",
     "test": "modern test --passWithNoTests"
   },
+  "exports": {
+    ".": {
+      "node": {
+        "import": "./dist/js/modern/index.js",
+        "require": "./dist/js/node/index.js"
+      },
+      "default": "./dist/js/treeshaking/index.js"
+    }
+  },
+  "bin": {
+    "prepublishOnly": "pnpm build --platform"
+  },
+  "engines": {
+    "node": ">=12.13.0"
+  },
   "dependencies": {
-    "@babel/runtime": "^7.18.0"
+    "@arco-design/iconbox-react-m4b-seller": "0.0.15",
+    "@arco-design/web-react": "2.30.0",
+    "@arco-design/webpack-plugin": "^1.7.0",
+    "@babel/runtime": "^7",
+    "@byted/uploader": "1.1.10",
+    "@dp/byted-tea-sdk-oversea": "5.0.20",
+    "@i18n-ecom/eslint-plugin": "4.0.1",
+    "@i18n-ecom/lib": "1.3.8",
+    "@ies/starling-cli": "2.7.7",
+    "@modern/plugin-runtime": "^5.0.13",
+    "@m4b-design/components": "0.1.0-alpha.0",
+    "@slardar/web": "1.0.1",
+    "eslint-plugin-eslint-comments": "3.2.0",
+    "eslint-plugin-promise": "6.0.0",
+    "eslint-plugin-react": "7.29.4",
+    "eslint-plugin-react-hooks": "4.3.0",
+    "glob": "8.0.3",
+    "handlebars": "^4.7.7",
+    "html-webpack-plugin": "^5",
+    "lodash": "4.17.21",
+    "qs": "6.10.5",
+    "query-string": "^6.13.7",
+    "react-router": "6.3.0",
+    "use-immer": "0.7.0"
   },
   "peerDependencies": {
     "react": "^17"
   },
   "devDependencies": {
-    "react": "^17",
-    "@modern-js/module-tools": "^1.1.5",
-    "@modern-js/plugin-testing": "^1.0.0",
-    "@modern-js/tsconfig": "^1.0.0",
-    "rimraf": "^3.0.2",
-    "lint-staged": "^11.2.6",
-    "prettier": "^2.6.2",
-    "husky": "4.3.8",
-    "typescript": "^4",
+    "@modern-js/module-tools": "^5.1.4",
+    "@jupiter/plugin-guardian": "^5.0.5",
+    "@jupiter/plugin-jarvis": "^5.0.5",
+    "@modern-js/tsconfig": "^5.0.2",
     "@types/jest": "^26.0.9",
     "@types/node": "^14",
-    "@types/react": "^17"
+    "@types/query-string": "^6.3.0",
+    "@types/react": "^17",
+    "husky": "4.3.8",
+    "lint-staged": "^11.2.6",
+    "prettier": "^2.6.2",
+    "react": "^17",
+    "typescript": "^4"
   },
   "sideEffects": [
     "*.css",
@@ -35,6 +84,6 @@
   ],
   "publishConfig": {
     "access": "public",
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://bnpm.byted.org/"
   }
 }

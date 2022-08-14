@@ -1,0 +1,69 @@
+.login {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #212533;
+    .loginButton {
+      color: #5245e5;
+      margin-left: 8px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+  }
+  
+  .buttonWrapper {
+    padding: 0 8px;
+    width: 100%;
+    margin-top: 16px;
+    .button {
+      width: 100%;
+    }
+  }
+  
+  .links {
+    display: flex;
+    padding: 0 8px;
+    .link {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: #474e66;
+      display: flex;
+      align-items: center;
+      .linkText {
+        text-decoration: none;
+        cursor: pointer;
+        color: #474e66;
+      }
+      &:first-child {
+        &:before {
+          display: none;
+        }
+      }
+      &:before {
+        cursor: auto;
+        content: '';
+        display: inline-block;
+        width: 1px;
+        height: 12px;
+        margin: 0 12px;
+        background: #b3bacc;
+      }
+    }
+  }
+  
+  .formWrapper {
+    position: relative;
+    .formWrapperLink {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 2;
+    }
+  }
+  
+  .pageWarpper {
+    background-color: #f6f6fb;
+    min-height: 100vh;
+  }
+  

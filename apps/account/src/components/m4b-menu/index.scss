@@ -1,0 +1,25 @@
+.menuWrapper {
+    border: 1px solid #dde2f0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 4px;
+    background-color: white;
+    .menuItem {
+      border-radius: 4px;
+      min-width: 87px;
+      padding: 0 8px;
+      box-sizing: border-box;
+      height: 36px;
+      line-height: 36px;
+      color: #474e66;
+      cursor: pointer;
+      &:hover {
+        background: #f5f5ff;
+      }
+      &.activeMenu {
+        font-weight: bold;
+        color: #5245e5;
+      }
+    }
+  }
+  

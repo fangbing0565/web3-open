@@ -1,0 +1,10 @@
+@import '../mixin';
+
+body {
+  @include font-base;
+}
+
+button {
+  outline: none;
+  box-shadow: none;
+}

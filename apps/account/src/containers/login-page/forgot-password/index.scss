@@ -1,0 +1,26 @@
+.alertTipWrapper {
+    margin: 12px 8px 0 8px;
+  }
+  .alertTips {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #474e66;
+    .alertEmail {
+      color: #3629cc;
+    }
+  }
+  .submitWrapper {
+    padding: 0 8px;
+    width: 100%;
+    margin-top: 12px;
+    .submitButton {
+      width: 100%;
+    }
+  }
+  
+  .pageWarpper {
+    background-color: #f6f6fb;
+    min-height: 100vh;
+  }
+  

@@ -1,0 +1,53 @@
+.submitWrapper {
+  padding: 0 8px;
+  width: 100%;
+  margin-top: 12px;
+  .submitButton {
+    width: 100%;
+  }
+  .tips {
+    padding: 0 14px;
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 16px;
+  }
+  .link {
+    color: #5245e5;
+    font-weight: 600;
+    text-decoration: none;
+  }
+}
+
+.alertTipWrapper {
+  margin: 12px 8px 0 8px;
+}
+.alertTips {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #474e66;
+  .alertEmail {
+    color: #3629cc;
+  }
+}
+
+.login {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #212533;
+  .loginButton {
+    color: #5245e5;
+    margin-left: 8px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+}
+
+.pageWarpper {
+  background-color: #f6f6fb;
+  min-height: 100vh;
+}
