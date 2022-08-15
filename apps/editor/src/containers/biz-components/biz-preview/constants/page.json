@@ -1,0 +1,95 @@
+{
+    "id": "hash001",
+    "version": "1.0.1",
+    "name": "Partner certificate",
+    "pageType": "formPage",
+    "sdk_version": "",
+    "sdk_url": "",
+    "creator": "",
+    "updateTime": "",
+    "previewUrls": [],
+    "description": "",
+    "biz_component_group_ids": [],
+    "formValues": [],
+    "schema": {
+      "body": {
+        "gutter": 8,
+        "sections": [
+          {
+            "title": "Certificate",
+            "layout": "vertical",
+            "colSpan": 24,
+            "children": [
+              {
+                "field": "entity_ertificate",
+                "bizType": "custom",
+                "type": "imageUpload",
+                "label": "Entity Certificate",
+                "customProps": {
+                  "limit": 2
+                },
+                "information": "1-2 pictures are allowed. For best quality."
+              },
+              {
+                "field": "entity_ertificate_number",
+                "bizType": "custom",
+                "type": "input",
+                "label": "Entity Certificate Number",
+                "placeholder": "Entity Certificate Number",
+                "customProps": {
+                  "maxLength": { "length": 100, "errorOnly": "true" },
+                  "showWordLimit": "true"
+                }
+              }
+            ]
+          },
+          {
+            "title": "Company",
+            "layout": "vertical",
+            "colSpan": 24,
+            "children": [
+              {
+                "field": "company_logo",
+                "bizType": "custom",
+                "type": "imageUpload",
+                "label": "Company Logo",
+                "customProps": {
+                  "limit": 2
+                },
+                "information": "1-2 pictures are allowed. For best quality."
+              },
+              {
+                "field": "company_name",
+                "bizType": "custom",
+                "type": "input",
+                "label": "Company Name",
+                "placeholder": "Enter the company name",
+                "customProps": {
+                  "maxLength": { "length": 100, "errorOnly": "true" },
+                  "showWordLimit": "true"
+                }
+              },
+              {
+                "field": "company_license_no",
+                "bizType": "custom",
+                "type": "input",
+                "label": "Company License No",
+                "placeholder": "Company License No",
+                "customProps": {
+                  "maxLength": { "length": 100, "errorOnly": "true" },
+                  "showWordLimit": "true"
+                }
+              },
+              {
+                "field": "company_license",
+                "bizType": "custom",
+                "type": "fileUpload",
+                "label": "Company License"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+  

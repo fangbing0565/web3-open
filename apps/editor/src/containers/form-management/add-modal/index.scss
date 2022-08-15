@@ -1,0 +1,68 @@
+.stepsWrap {
+    padding: 0 170px;
+  }
+  
+  .marketsWrap {
+    width: 100%;
+    padding: 16px 0;
+    background: #f6f6fb;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .marketsText {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 8px;
+    margin-left: 8px;
+  }
+  
+  .itemMarkts {
+    margin: 0 16px;
+    line-height: 20px;
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    display: inline-block;
+  }
+  
+  .selectWrap {
+    width: 352px;
+  }
+  
+  .previewBtn {
+    margin-left: 8px;
+  }
+  
+  .viewBtn {
+    margin-left: 8px;
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  .footerBtnWrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .cancelBtn {
+    margin-right: 12px;
+  }
+  
+  .message {
+    display: block;
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #8f98b2;
+  }
+  

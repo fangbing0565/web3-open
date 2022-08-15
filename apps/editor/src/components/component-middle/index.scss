@@ -1,0 +1,16 @@
+.componentMiddleWrap {
+  padding: 16px 16px 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .tableTotal {
+    color: #212533;
+    font-size: 14px;
+    font-weight: 400;
+    span {
+      color: #5245e5;
+      font-weight: 600;
+      margin-right: 4px;
+    }
+  }
+}

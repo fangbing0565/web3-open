@@ -1,0 +1,28 @@
+.wrapper {
+    .form {
+      padding: 0 16px;
+    }
+    .table {
+      margin: 0 4px;
+    }
+  
+    :global {
+      .arco-form-label-item {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        color: #474e66;
+      }
+      .arco-table-th-item-title {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+        color: #69718c;
+      }
+    }
+  }
+  
+  .modalWrapper {
+    z-index: 999 !important;
+  }
+  

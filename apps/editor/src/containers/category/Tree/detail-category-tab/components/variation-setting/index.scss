@@ -1,0 +1,27 @@
+.wrapper {
+    width: 100%;
+  
+    .inputSearch {
+      width: 30%;
+    }
+  
+    .tagWrapper {
+      margin-top: 16px;
+      width: 50%;
+  
+      .tag {
+        margin: 0 8px 8px 0;
+      }
+    }
+  
+    :global {
+      .arco-input-group-wrapper .arco-input-inner-wrapper {
+        height: 45px;
+      }
+      .arco-tag-icon {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+  

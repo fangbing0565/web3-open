@@ -1,0 +1,30 @@
+.searchSelect {
+    width: 88px;
+    height: 45px;
+    margin-right: 8px;
+  }
+  
+  .filterStatusWrapper {
+    width: 88px;
+    padding-left: 12px;
+    background: #ffffff;
+    border: 1px solid #d4d6d9;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    &.focus {
+      border: 1px solid red;
+    }
+  }
+  
+  .filterSpan {
+    font-size: 14px;
+    color: #12141a;
+  }
+  
+  .icon {
+    flex: 1;
+    text-align: right;
+  }
+  

@@ -1,0 +1,30 @@
+.searchWrapper {
+    flex-grow: 1;
+    width: 160px;
+    margin-left: 8px;
+    position: relative;
+    :global(.search-input-auto-complete) {
+      flex-grow: 1;
+      width: 160px;
+      margin-left: 8px;
+    }
+    :global(.arco-input-group .arco-input-inner-wrapper) {
+      background-color: #ffffff;
+      border: 1px solid #d4d6d9;
+      border-radius: 4px;
+      padding: 0px 12px;
+      height: 45px;
+  
+      :global(.arco-input) {
+        padding: 0px;
+      }
+    }
+  }
+  .spinWrapper {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    background-color: #ffffff;
+  }
+  

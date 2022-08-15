@@ -1,0 +1,19 @@
+@import '@i18n-ecom-op/styles/common.scss';
+.treeVersionPage {
+  position: relative;
+  display: flex;
+  background-color: $pageBackgroundColor;
+  height: calc(100vh - 120px);
+  box-sizing: border-box;
+  overflow: scroll;
+  .createButton {
+    position: absolute;
+    right: 24px;
+    top: 120px;
+  }
+  :global {
+    .arco-btn {
+      font-weight: 600;
+    }
+  }
+}

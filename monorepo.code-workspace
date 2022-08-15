@@ -1,6 +1,10 @@
 {
   "folders": [
     {
+      "name": "editor",
+      "path": "apps/editor/"
+    },
+    {
       "name": "bridge",
       "path": "features/bridge/"
     },

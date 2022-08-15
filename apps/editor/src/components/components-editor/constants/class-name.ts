@@ -1,0 +1,23 @@
+export enum CLASS_NAMES {
+    BIZ_BODY_FILEDS = '__biz_body_fields',
+    BIZ_ACTIVE_SECTION_CLICK = '__biz_active_section_click',
+    BIZ_ACTIVE_FIELD_CLICK = '__biz_active_field_click',
+    BIZ_ACTIVE_CLICK_RELATION = '__biz_active_click_relation',
+    BIZ_BODY_SECTION = '__biz_body_section',
+    BIZ_CLICK_BUTTON_GROUP = '__biz-click-button-group',
+    BIZ_CLICK_BUTTON = '__biz-click-button',
+    BIZ_CLICK_BUTTON_DELETE = '__biz-click-button-delete',
+    BIZ_CLICK_BUTTON_UP = '__biz-click-button-up',
+    BIZ_CLICK_BUTTON_DOWN = '__biz-click-button-down',
+    BIZ_GROUP_SECTION = '__biz_group_section',
+    BIZ_GROUP_COMP = '__biz_group_comp',
+    BIZ_SECTION_ITEM = '__biz_section_item',
+    BIZ_COMPONENT_PREVIEW = '__biz-component-preview',
+    BIZ_COMPONENT_CARD = '__biz-component-card',
+    BIZ_ACTIVE_SECTION_HOVER = '__biz_active_section_hover',
+    BIZ_ACTIVE_FIELD_HOVER = '__biz_active_field_hover',
+    BIZ_BODY_WARPPER = '__biz_body_warpper',
+    BIZ_COMPONENT_CANNOT_DRAG = '__biz_component_can_not_drag',
+    BIZ_BODY_SCROLL = '__biz_body_scroll',
+  }
+  

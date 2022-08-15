@@ -1,0 +1,77 @@
+{
+    "id": "hash001",
+    "version": "1.0.1",
+    "name": "Partner certificate",
+    "pageType": "formPage",
+    "schema": {
+      "body": {
+        "gutter": 8,
+        "sections": [
+          {
+            "title": "Registration Region",
+            "layout": "vertical",
+            "colSpan": 24,
+            "children": [
+              {
+                "field": "region",
+                "bizType": "common",
+                "type": "select",
+                "label": "Confirm Your Registration Region",
+                "customProps": {
+                  "placeholder": "Select your service region"
+                }
+              }
+            ]
+          },
+          {
+            "title": "Company Service Domain",
+            "layout": "vertical",
+            "colSpan": 24,
+            "children": [
+              {
+                "field": "category",
+                "bizType": "common",
+                "type": "select",
+                "label": "Target Service Category",
+                "customProps": {
+                  "placeholder": "Select your service category"
+                },
+                "information": "Select a category that your service belongs to. (More categories can be added after submitting if you want to broaden your business scope)"
+              },
+              {
+                "field": "area",
+                "bizType": "common",
+                "type": "cascader",
+                "label": "Target market region(s)",
+                "customProps": {
+                  "placeholder": "Select service category first"
+                },
+                "information": "Select target region(s) corresponding to the category above. It determintes the marketplace where service can be displayed. "
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "formValues": [
+      {
+        "key": "region",
+        "value": "123",
+        "not_editable": true,
+        "extra": ""
+      },
+      {
+        "key": "category",
+        "value": "123",
+        "not_editable": true,
+        "extra": ""
+      },
+      {
+        "key": "markect",
+        "value": "123",
+        "not_editable": true,
+        "extra": ""
+      }
+    ]
+  }
+  

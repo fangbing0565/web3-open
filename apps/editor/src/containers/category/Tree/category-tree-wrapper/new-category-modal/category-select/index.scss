@@ -1,0 +1,21 @@
+.treeContainer {
+    flex-grow: 1;
+    box-sizing: border-box;
+    padding: 0 8px;
+    overflow: auto;
+  }
+  .treeNode {
+    width: 100%;
+    align-items: center;
+    :global(.arco-tree-node-title) {
+      flex-grow: 1;
+      overflow: hidden;
+    }
+  }
+  .spinWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+  }
+  

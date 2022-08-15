@@ -1,0 +1,55 @@
+import React from 'react';
+import { useData } from '@i18n-ecom-op/block-page-table';
+import { Button, Form, Modal, Input, Message } from '@i18n-ecom/ui';
+import {
+  categoryRuleAPIClient,
+  FeCategoryTreeData,
+} from '@/api/operation/serv/oec_operation_category_rule_api';
+
+interface Props {
+  visible: boolean;
+  show: () => void;
+  hide: () => void;
+}
+const CreateModal = ({ visible, show, hide }: Props) => {
+  const FormItem = Form.Item;
+  const [form] = Form.useForm();
+  const { mutate } = useData();
+  return (
+    <Modal
+      title="Add New Front-end Category Tree"
+      visible={visible}
+      onCancel={() => hide()}
+      closable={true}
+      onOk={async () => {
+        await form.validate();
+        const name = form.getFieldValue('name');
+        const desc = form.getFieldValue('desc');
+        try {
+          const result = await categoryRuleAPIClient.CreateFeCategoryTree({
+            name,
+            desc,
+          });
+          hide();
+          const { message } = result;
+          await mutate();
+          Message.success(message);
+        } catch (error) {
+          Message.error(error.message);
+        }
+      }}>
+      <Form form={form} layout={'vertical'}>
+        <FormItem
+          label="Front-end Category Tree Name"
+          field="name"
+          rules={[{ required: true }]}>
+          <Input placeholder="Enter Front-end Category Tree Name" />
+        </FormItem>
+        <FormItem label="Front-end Category Tree Description" field="desc">
+          <Input placeholder="Enter Front-end Category Tree Description" />
+        </FormItem>
+      </Form>
+    </Modal>
+  );
+};
+export default CreateModal;

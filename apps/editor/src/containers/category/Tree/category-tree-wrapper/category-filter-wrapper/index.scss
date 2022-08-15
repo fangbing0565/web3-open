@@ -1,0 +1,51 @@
+.search-bar {
+    background: #ffffff;
+    display: flex;
+  }
+  
+  .filter-div {
+    width: 88px;
+    padding-left: 12px;
+    background: #ffffff;
+    border: 1px solid #d4d6d9;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    &.focus {
+      border: 1px solid red;
+    }
+  }
+  
+  .filter-icon {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .filter-span {
+    font-size: 14px;
+    color: #12141a;
+  }
+  
+  .search-select {
+    flex-grow: 0;
+    width: 88px;
+    height: 45px;
+    margin-right: 8px;
+  }
+  
+  :global {
+    .search-input-auto-complete {
+      flex-grow: 1;
+      width: 160px;
+      margin-left: 8px;
+    }
+  }
+  
+  .status {
+    display: inline-block;
+  }
+  
+  .country {
+    display: inline-block;
+  }
+  

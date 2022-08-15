@@ -1,0 +1,16 @@
+.middleBox {
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: #212533;
+    padding-left: 16px;
+    margin-top: 28px;
+    .number {
+      color: #5245e5;
+      margin-right: 4px;
+    }
+  }
+  

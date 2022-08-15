@@ -1,0 +1,20 @@
+@import '@i18n-ecom-op/styles/common.scss';
+.categoryTreePage {
+  position: relative;
+  display: flex;
+  background-color: $pageBackgroundColor;
+  height: calc(100vh - 120px);
+  box-sizing: border-box;
+  overflow: scroll;
+  border-radius: 4px;
+  .createButton {
+    position: absolute;
+    right: 24px;
+    top: 120px;
+  }
+  :global {
+    .arco-btn {
+      font-weight: 600;
+    }
+  }
+}

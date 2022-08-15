@@ -1,0 +1,14 @@
+@import '@i18n-ecom-op/styles/common.scss';
+.categoryTreePage {
+  display: flex;
+  background-color: $pageBackgroundColor;
+  height: calc(100vh - 120px);
+  box-sizing: border-box;
+  overflow: scroll;
+}
+
+.categoryContentWrapper {
+  margin-left: 16px;
+  flex-grow: 1;
+  overflow: scroll;
+}
